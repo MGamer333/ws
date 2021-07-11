@@ -208,3 +208,48 @@ class Router
     display: none;
 }
 ```
+
+## Modal
+```html
+<div class="modal" id="modal">
+        <div class="modal-content">
+                asd
+                <button class="btn btn-dark" id="exit">exit</button>
+        </div>
+    </div>
+```
+
+```scss
+.modal
+{
+    background: rgba(0,0,0,.9);
+    z-index: 9999;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    animation: animate-layer .3s;
+
+    .modal-content {
+        border-radius: 5px;
+        z-index: 9999999;
+        background-color: #fefefe;
+        margin: 10% auto; /* 15% from the top and centered */
+        margin-bottom: 0;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 600px;
+        height: 400px;
+        animation: animate-in .5s;
+    }
+}
+
+@keyframes animate-in {
+    from {margin-top: 0}
+    to {margin-top: 10%}
+}
+```
