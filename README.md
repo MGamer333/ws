@@ -187,3 +187,24 @@ class Router
     }
 }
 ```
+
+## scss
+```scss
+@mixin breakpoint( $class )
+{
+    @if $class == mobile 
+    {
+        @media ( max-width: $view-breakpoint)  { @content; }
+    }
+
+    @else if $class == desktop 
+    {
+        @media ( min-width: $view-breakpoint ) { @content; }
+    }
+}
+
+@include breakpoint( mobile )
+{
+    display: none;
+}
+```
